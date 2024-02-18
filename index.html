@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Railway Ticket</title>
+    <!-- css style  -->
+    <link rel="stylesheet" href="css/style.css">
     <!-- daisy UI Link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="container max-w-[1200px] mx-auto">
+<body class="max-w-[1200px] mx-auto">
     <!-- Header  -->
     <header>
         <nav>
@@ -65,10 +67,10 @@
         </nav>
 
         <!-- Banner Section  -->
-        <div class="hero mix-h-screen lg:h-[550px]  bg-[url(./images/banner.png)] ">
+        <div class="hero  lg:h-[550px]  bg-[url(./images/banner.png)] ">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
-                <div class="max-w-md">
+                <div class="">
                     <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
                     <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
                         exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
@@ -79,7 +81,112 @@
     </header>
 
     <!-- Main  -->
-    <main>
+    <main class="lg:px-3">
+        <!-- Best Offers Section  -->
+        <div class="my-10 lg:my-20">
+            <h1 class="text-center font-bold text-3xl lg:text-5xl">Best Offers For Every Person!</h1>
+            <div class="my-8 lg:flex gap-10 mx-3 lg:mx-0">
+                <div class="card w-full ">
+                    <div class="flex justify-around py-8 lg:py-14 bg-amber-500 rounded-xl my-3 lg:my-0">
+                        <div>
+                            <h3 class="text-3xl lg:text-5xl font-extrabold">10% OFF</h3>
+                            <h4 class="font-bold lg:text-2xl lg:m-2">On You Next Purchase</h4>
+                            <p class="text-gray lg:mx-2">Use By March 2024</p>
+                        </div>
+                        <!-- <div class="border-x-fuchsia-600"></div> -->
+                        <div class="flex items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold lg:mb-2">NEW15</h3>
+                                <p>Coupon Code</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-full ">
+                    <div class="flex justify-around py-8 lg:py-14 bg-amber-500 rounded-xl my-3 lg:my-0">
+                        <div>
+                            <h3 class="text-3xl lg:text-5xl font-extrabold">10% OFF</h3>
+                            <h4 class="font-bold lg:text-2xl lg:m-2">On You Next Purchase</h4>
+                            <p class="text-gray lg:mx-2">Use By March 2024</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold lg:mb-2">NEW15</h3>
+                                <p>Coupon Code</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex justify-center">
+                <button class="btn btn-outline btn-success">See All Offers</button>
+            </div>
+        </div>
+
+        <!-- main section with Paribahon  -->
+        <section class="border-2 border-lime-600 rounded-lg h-[800px]">
+            <section>
+                <div class="lg:w-2/3 mx-auto">
+                    <h1 class="text-5xl font-bold text-center my-4">Bangladesh Railway</h1>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat excepturi est
+                        sint aspernatur
+                        earum nemo accusamus ullam voluptates quis quibusdam quasi molestiae consequatur ad, ducimus
+                        corrupti omnis dolore tempora, voluptatum rem voluptatibus. Quidem sit ea consequuntur dolores
+                        voluptatem quam quas ipsam, fugiat.</p>
+                </div>
+
+
+
+                <div class="lg:grid grid-cols-8 py-8 lg:mt-4">
+                    <div class="col-span-6 ">
+                        <div class="lg:flex justify-between items-center lg:px-8">
+                            <div class="flex  items-center gap-4">
+                                <img src="./images//bus-logo.png" alt="">
+                                <div>
+                                    <h4 class="text-2xl pb-2 font-semibold">Railway paribahon</h4>
+                                    <p>Coach-009-WEB ! AC_Business</p>
+                                </div>
+                            </div>
+                            <button class="btn">
+                                <img src="./images/seat-green.png" alt="">
+                                <span>40</span>
+                                <p>seats left</p>
+                            </button>
+                        </div>
+                        <div class="py-4 bg-slate-100 rounded-xl lg:mx-8 lg:my-8">
+                            <div class="flex justify-between lg:px-12">
+                                <p>Route</p>
+                                <h4>Cox's Bazar-Dhaka</h4>
+                            </div>
+                            <hr class="w-5/6 mx-auto my-4">
+                            <div class="flex justify-between lg:px-12">
+                                <p>Departure Time</p>
+                                <h4>9.00PM</h4>
+                            </div>
+                            <hr class="w-5/6 mx-auto my-4">
+                            <div class="flex justify-center items-center ">
+                                <div class="gap-20">
+                                    <button class="btn">Boarding Point - Cox's bazar</button>
+                                    <button class="btn">Dropping Point - Bogura</button>
+                                    <button class="btn">Est. Time -10 Hours</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-span-2 border-2">
+                        <h1>Shaker</h1>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section>
+            <div class="h-[200px]">
+
+            </div>
+
+        </section>
 
     </main>
 
