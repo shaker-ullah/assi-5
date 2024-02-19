@@ -26,13 +26,21 @@ for (const btn of allSeats) {
         li.appendChild(p3)
         bookingSeat.appendChild(li)
 
-        // const perSeatPrice = (e.target.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes[1].childNodes[3].childNodes[3].childNodes[1].childNodes[1].innerText)
-        // console.log(perSeatPrice)
-
-
+        // function call 
         setInnerText('count-seats', count)
         setInnerText('booking-seats', booking)
+        totalTicketPrice('total-price', perSeatPrice)
+        totalTicketPrice('grand-total', perSeatPrice)
     })
+}
+
+
+// total price function
+
+function totalTicketPrice(id, value) {
+    const totalPrice = document.getElementById(id).innerText;
+    const convertedTotalPrice = parseInt(totalPrice)
+    document.getElementById(id).innerText = convertedTotalPrice + perSeatPrice;
 }
 
 // innerText function
