@@ -1,17 +1,22 @@
 const allSeats = document.getElementsByClassName('seat-btn');
 let count = 0;
-let booking = 24;
-let perSeatPrice = 550;
 let seatClass = 'Economy';
 for (const btn of allSeats) {
     // console.log(btn)
     btn.addEventListener('click', (e) => {
         btn.style.backgroundColor = 'green'
         count = count + 1
-        booking = booking - 1;
+        let booking = document.getElementById('booking-seats').innerText;
+        let convertedBooking = parseInt(booking);
+        convertedBooking = convertedBooking - 1;
 
         const seatName = e.target.innerText;
         // console.log(seatName)
+
+        const perSeat = document.getElementById('per-seat').innerText;
+        const convertedPrice = parseInt(perSeat)
+        // console.log(convertedPrice)
+
 
         const bookingSeat = document.getElementById('new-ticket');
         const li = document.createElement('li')
@@ -20,7 +25,7 @@ for (const btn of allSeats) {
         const p2 = document.createElement('p');
         p2.innerText = seatClass;
         const p3 = document.createElement('p');
-        p3.innerText = perSeatPrice;
+        p3.innerText = convertedPrice;
         li.appendChild(p)
         li.appendChild(p2)
         li.appendChild(p3)
@@ -28,9 +33,9 @@ for (const btn of allSeats) {
 
         // function call 
         setInnerText('count-seats', count)
-        setInnerText('booking-seats', booking)
-        totalTicketPrice('total-price', perSeatPrice)
-        totalTicketPrice('grand-total', perSeatPrice)
+        setInnerText('booking-seats', convertedBooking)
+        totalTicketPrice('total-price', convertedPrice)
+        totalTicketPrice('grand-total', convertedPrice)
     })
 }
 
@@ -40,7 +45,7 @@ for (const btn of allSeats) {
 function totalTicketPrice(id, value) {
     const totalPrice = document.getElementById(id).innerText;
     const convertedTotalPrice = parseInt(totalPrice)
-    document.getElementById(id).innerText = convertedTotalPrice + perSeatPrice;
+    document.getElementById(id).innerText = convertedTotalPrice + value;
 }
 
 // innerText function
