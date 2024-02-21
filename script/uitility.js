@@ -4,17 +4,17 @@ for (const btn of allBtn) {
     // console.log(btn)
 
     let seatClass = 'Ac-class'
-   
+
     btn.addEventListener('click', function (event) {
         event.target.style.backgroundColor = 'green';
-        event.target.setAttribute('disabled', false)
+
         const perPersonBuy = getInnerTextValue('count-seats')
         if (perPersonBuy + 1 > 4) {
             alert('Your limit is close')
             return;
         }
+        event.target.setAttribute('disabled', false)
 
-        
         const seatPrice = getInnerTextValue('per-seat')
         // console.log(seatPrice)
         const seatName = event.target.innerText;
@@ -23,13 +23,13 @@ for (const btn of allBtn) {
         document.getElementById('count-seats').innerText = seat + 1
         const haveSeat = getInnerTextValue('booking-seats')
         document.getElementById('booking-seats').innerText = haveSeat - 1;
-        
+
         const selectedDiv = document.getElementById('new-ticket');
         // create New Element
 
 
-       
-       
+
+
 
 
 

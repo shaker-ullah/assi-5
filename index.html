@@ -57,7 +57,7 @@
                     <h1 class="mb-5 text-5xl font-bold">Hello Cox's Bazar</h1>
                     <p class="mb-5">Welcome to cox's bazar with rail journey. I hope everyone is well by the almighty
                         allah. Have safe journey with Bangladesh Rail</p>
-                    <button class="btn btn-primary">Booking Ticket</button>
+                    <!-- <button class="btn btn-primary">Booking Ticket</button> -->
                 </div>
             </div>
         </div>
@@ -69,15 +69,15 @@
         <div class="my-10 lg:my-20">
             <h1 class="text-center font-bold text-3xl lg:text-5xl">Best Offers For Every Person!</h1>
             <div class="my-8 lg:flex gap-10 mx-3 lg:mx-0">
-              
+
                 <div class="card w-full ">
                     <div class="flex justify-around   bg-orange-500 rounded-xl my-3 lg:my-0">
                         <div class="flex items-center">
-                           <div>
-                            <h3 class="text-3xl lg:text-5xl font-extrabold">10% Discount</h3>
-                            <h4 class="font-bold lg:text-2xl lg:m-2">On You Next Purchase</h4>
-                            <p class="text-gray lg:mx-2">Use By March 2024</p>
-                           </div>
+                            <div>
+                                <h3 class="text-3xl lg:text-5xl font-extrabold">10% Discount</h3>
+                                <h4 class="font-bold lg:text-2xl lg:m-2">On You Next Purchase</h4>
+                                <p class="text-gray lg:mx-2">Use By March 2024</p>
+                            </div>
                         </div>
                         <div><img src="images/cupon-devider.png" alt=""></div>
                         <div class="flex items-center">
@@ -91,11 +91,11 @@
                 <div class="card w-full ">
                     <div class="flex justify-around   bg-lime-500 rounded-xl my-3 lg:my-0">
                         <div class="flex items-center">
-                           <div>
-                            <h3 class="text-3xl lg:text-5xl font-extrabold">10% Discount</h3>
-                            <h4 class="font-bold lg:text-2xl lg:m-2">On You Next Purchase</h4>
-                            <p class="text-gray lg:mx-2">Use By March 2024</p>
-                           </div>
+                            <div>
+                                <h3 class="text-3xl lg:text-5xl font-extrabold">10% Discount</h3>
+                                <h4 class="font-bold lg:text-2xl lg:m-2">On You Next Purchase</h4>
+                                <p class="text-gray lg:mx-2">Use By March 2024</p>
+                            </div>
                         </div>
                         <div><img src="images/cupon-devider.png" alt=""></div>
                         <div class="flex items-center">
@@ -254,21 +254,36 @@
                         </div>
                         <div class="join my-4">
                             <input id="apply-coupon" class="input input-bordered join-item" placeholder="Coupon use" />
-                            <button onclick="updateGrandTotal('btn-coupon')" class="btn join-item rounded-r-full">Apply</button>
+                            <button onclick="updateGrandTotal('btn-coupon')"
+                                class="btn join-item rounded-r-full">Apply</button>
                         </div>
                         <div class="flex justify-between my-4">
                             <h4 class="text-xl font-bold">Total Grand</h4>
                             <h4 class="text-xl font-bold">BDT <span id="grand-total">0</span></h4>
                         </div>
-                        <form>
-                            <p class="my-2">Passenger Name</p>
-                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-                            <p class="my-2">Phone Number</p>
-                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-                            <p class="my-2">Email ID</p>
-                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-                            <input class="btn btn-success w-full my-6" type="button" value="Next">
-                        </form>
+                        <div>
+                        <p class="my-2">Passenger Name</p>
+                        <input type="text" placeholder="Type here"
+                            class="input input-bordered w-full max-w-xs required:" />
+                        <p class="my-2">Phone Number</p>
+                        <input id="number" type="number" placeholder="Type here"
+                            class="input input-bordered w-full max-w-xs required:" />
+                        <p class="my-2">Email ID</p>
+                        <input type="text" placeholder="Type here"
+                            class="input input-bordered w-full max-w-xs required:" />
+                        <!-- Open the modal using ID.showModal() method -->
+                        <!-- You can open the modal using ID.showModal() method -->
+                        <button class="btn w-full my-4" onclick="my_modal_3.showModal()">open modal</button>
+                        <dialog id="my_modal_3" class="modal">
+                            <div class="modal-box">
+                                <form method="dialog">
+                                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                </form>
+                                <h3 class="font-bold text-lg">Hello!</h3>
+                                <p class="py-4">Thanks! Your seats is confirm</p>
+                            </div>
+                        </dialog>
+                    </div>
 
                     </div>
                 </div>
