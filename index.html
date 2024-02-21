@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- css style  -->
-    <link rel="stylesheet" href="css/style.css">
     <!-- daisy UI Link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -53,11 +51,12 @@
         <div class="hero  lg:h-[550px]  bg-[url(./images/banner.png)] ">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
-                <div class="">
-                    <h1 class="mb-5 text-5xl font-bold">Hello Cox's Bazar</h1>
-                    <p class="mb-5">Welcome to cox's bazar with rail journey. I hope everyone is well by the almighty
-                        allah. Have safe journey with Bangladesh Rail</p>
-                    <!-- <button class="btn btn-primary">Booking Ticket</button> -->
+                <div class="lg:w-3/4">
+                    <h1 class="mb-5 text-5xl font-bold ">Hello Cox's Bazar</h1>
+                    <p class="mb-5">Welcome to Cox's Bazar, where the azure waters meet golden sands, and the horizon stretches endlessly, painting a picturesque scene of tranquility. Feel the warmth of the sun on your skin as you stroll along the world's longest natural sandy beach, embracing the gentle rhythm of the waves.</p>
+                        <button class="btn btn-outline btn-secondary">
+                            <a href="/seats">Booking-seats</a>
+                        </button>
                 </div>
             </div>
         </div>
@@ -118,11 +117,7 @@
             <section>
                 <div class="lg:w-2/3 mx-auto">
                     <h1 class="text-5xl font-bold text-center my-4">Bangladesh Railway</h1>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat excepturi est
-                        sint aspernatur
-                        earum nemo accusamus ullam voluptates quis quibusdam quasi molestiae consequatur ad, ducimus
-                        corrupti omnis dolore tempora, voluptatum rem voluptatibus. Quidem sit ea consequuntur dolores
-                        voluptatem quam quas ipsam, fugiat.</p>
+                    <p class="text-center">Cox's Bazar Railway Station stands as a gateway to one of the most renowned tourist destinations in Bangladesh. Located in the southeastern part of the country, Cox's Bazar boasts the world's longest natural sandy sea beach, drawing travelers from far and wide. The railway station, with its modest yet functional infrastructure, serves as a vital link connecting visitors to this coastal paradise.</p>
                 </div>
 
 
@@ -195,7 +190,7 @@
                         <i class="fa-solid fa-dharmachakra btn "></i>
                     </div>
                     <!-- seats  -->
-                    <div class="grid grid-cols-12 lg:gap-x-10 lg:mt-10 ">
+                    <div id="seats" class="grid grid-cols-12 lg:gap-x-10 lg:mt-10 ">
                         <div class="col-span-6 grid grid-cols-2 lg:gap-10">
 
                             <div class="btn seat-btn">A1</div>
