@@ -6,14 +6,15 @@ for (const btn of allBtn) {
     let seatClass = 'Ac-class'
    
     btn.addEventListener('click', function (event) {
+        event.target.style.backgroundColor = 'green';
+        event.target.setAttribute('disabled', false)
         const perPersonBuy = getInnerTextValue('count-seats')
         if (perPersonBuy + 1 > 4) {
             alert('Your limit is close')
             return;
         }
 
-        event.target.style.backgroundColor = 'green';
-        event.target.setAttribute('disabled', false)
+        
         const seatPrice = getInnerTextValue('per-seat')
         // console.log(seatPrice)
         const seatName = event.target.innerText;
@@ -65,7 +66,7 @@ function updateGrandTotal(coupon) {
         const couponCode = document.getElementById("apply-coupon").value;
 
 
-        if ((couponCode == 'NEW15') || (couponCode == 'couple 20')) {
+        if ((couponCode == 'NEW15') || (couponCode == 'Couple 20')) {
             const discount = totalPrice * 0.1;
             // console.log(discount)
             document.getElementById('grand-total').innerText = totalPrice - discount
