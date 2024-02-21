@@ -11,6 +11,9 @@ for (const btn of allBtn) {
             alert('Your limit is close')
             return;
         }
+
+        event.target.style.backgroundColor = 'green';
+        event.target.setAttribute('disabled', false)
         const seatPrice = getInnerTextValue('per-seat')
         // console.log(seatPrice)
         const seatName = event.target.innerText;
